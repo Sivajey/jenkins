@@ -6,8 +6,6 @@ pipeline {
     }
     stages  {
       stage ('Build with Kaniko') {
-       steps {
-        git 'https://github.com/Sivajey/kaniko.git'
         container(name: 'kaniko', shell: '/busybox/sh') {
         withEnv(['PATH+EXTRA=/busybox:/kaniko']) {
           sh '''#!/busybox/sh
