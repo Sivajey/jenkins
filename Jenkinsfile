@@ -12,7 +12,6 @@ pipeline {
           /kaniko/executor -f `pwd`/Dockerfile -c `pwd` --destination=docker.io/sivajey/kaniko:v1
           '''
         }
-        }
       }
     }
   }
