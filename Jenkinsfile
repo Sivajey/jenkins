@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        any {
+        kubernetes {
             label 'kaniko'
             yaml """
 apiVersion: v1
@@ -9,15 +9,6 @@ metadata:
   name: kaniko
 spec:
   containers:
-  - name: jnlp
-    image: jenkins/jnlp-slave:3.35-5-alpine
-    resources:
-      limits:
-        cpu: 500m
-        memory: 250Mi
-      requests:
-        cpu: 500m
-        memory: 250Mi
   - name: kaniko
     image: gcr.io/kaniko-project/executor:debug-v0.9.0
     command:
