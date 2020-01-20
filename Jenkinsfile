@@ -31,7 +31,7 @@ spec:
         container(name: 'kaniko', shell: '/busybox/sh') {
         withEnv(['PATH+EXTRA=/busybox:/kaniko']) {
           sh '''#!/busybox/sh
-          /kaniko/executor -f `pwd`/Dockerfile -c `pwd` --destination=docker.io/sivajey/kaniko:v1
+          /kaniko/executor -f `pwd`/Dockerfile -c `pwd` --destination=core.harbor.k8sdevops.site/demo/kaniko:v1
           '''
         }
         }
