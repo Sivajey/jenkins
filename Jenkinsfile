@@ -2,6 +2,7 @@ pipeline {
     agent {
         kubernetes {
             label 'kaniko'
+            yamlFile 'build.yml'
         }
     }
     stages  {
