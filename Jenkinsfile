@@ -24,6 +24,9 @@ spec:
         """
         }
     }
+    environment {
+    DOCKER_CREDENTIAL_ID = 'dockerhub'
+    }
     stages  {
       stage ('Build with Kaniko') {
        steps {
