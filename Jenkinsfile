@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        kubernetes {
+        any {
             label 'kaniko'
             yaml """
 apiVersion: v1
