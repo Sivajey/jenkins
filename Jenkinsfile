@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        kubernetes {
+        node {
             label 'kaniko'
             yamlFile 'build.yml'
         }
