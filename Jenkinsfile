@@ -30,9 +30,6 @@ spec:
         cpu: 0.5
         memory: 500Mi
     tty: true
-    volumeMounts:
-      - name: docker-config
-        mountPath: /kaniko/.docker/
         """
         }
     }
