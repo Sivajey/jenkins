@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        node {
+        any {
             label 'kaniko'
             yamlFile 'build.yml'
         }
