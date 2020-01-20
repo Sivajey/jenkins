@@ -8,10 +8,10 @@ spec:
     image: jenkins/jnlp-slave:3.35-5-alpine
     resources:
       limits:
-        cpu: 500m
+        cpu: 200m
         memory: 250Mi
       requests:
-        cpu: 500m
+        cpu: 100m
         memory: 250Mi
   - name: kaniko
     image: gcr.io/kaniko-project/executor:debug-v0.9.0
@@ -19,8 +19,8 @@ spec:
     - /busybox/cat
     resources:
       limits:
-        cpu: 2
-        memory: 2Gi
+        cpu: 1
+        memory: 1Gi
       requests:
         cpu: 0.5
         memory: 500Mi
