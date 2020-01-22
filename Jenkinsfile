@@ -22,6 +22,16 @@ spec:
         cpu: 0.5
         memory: 500Mi
     tty: true
+    volumeMounts:
+      - name: docker-config
+        mountPath: /kaniko/.docker/
+  volumes:
+    - name: docker-config
+      secret:
+        secretName: regcred
+        items:
+          - key: .dockerconfigjson
+            path: config.json
         """
         }
     }
