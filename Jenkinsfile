@@ -8,7 +8,6 @@ kind: Pod
 metadata:
   name: kaniko
 spec:
-  serviceAccountName: bot
   containers:
   - name: kaniko
     image: gcr.io/kaniko-project/executor:debug-v0.9.0
